@@ -1,0 +1,27 @@
+[
+    {
+        "product_id": "1",
+        "product_name": "Acer Nitro 5",
+        "amount": "13656562"
+    },
+    {
+        "product_id": "2",
+        "product_name": "hp lite",
+        "amount": "1365623"
+    },
+    {
+        "product_id": "3",
+        "product_name": "lenovo",
+        "amount": "136899562"
+    },
+    {
+        "product_id": "4",
+        "product_name": "samsung",
+        "amount": "13456562"
+    },
+    {
+        "product_id": "5",
+        "product_name": "macbook",
+        "amount": "136523462"
+    }
+]

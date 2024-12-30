@@ -139,6 +139,17 @@ divide(10, 0)
 # -----------
 # Assignment 1: Write a function that calculates the factorial of a number and handles any potential errors.
 
+def factorial(number:int) -> int:
+    result = 1
+    try:
+        while number > 0:
+            result *= number
+            number -= 1
+        return result
+    except Exception as ex:
+        print(f'Error: {ex}')
 
+number = 5
+print(f'{number}! = {factorial(number)}')
 # Congratulations on completing the advanced section on Python functions!
 # Review the assignments, try to solve them, and check your understanding of function concepts.

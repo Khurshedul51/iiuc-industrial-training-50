@@ -91,8 +91,46 @@ with open('data/users.json', 'r') as file:
 # Assignments
 # -----------
 # Assignment 1: Write a script that reads a CSV file containing product information and converts it into a JSON file.
+with open("data/products.csv", 'w', newline='') as file:
+    writer = csv.writer(file)
+    writer.writerow(["product_id", "product_name", "amount"])
+    writer.writerow([1, "Acer Nitro 5", 13656562])
+    writer.writerow([2, "hp lite", 1365623])
+    writer.writerow([3, "lenovo", 136899562])
+    writer.writerow([4, "samsung", 13456562])
+    writer.writerow([5, "macbook", 136523462])
+
+def csv_to_json(csv_file: str, json_file: str):
+    with open(csv_file, 'r') as file:
+        csv_reader = csv.DictReader(file)
+        data = [row for row in csv_reader]
+    with open(json_file, 'w') as file:
+        json.dump(data, file, indent=4)
+
+csv_to_json("data/products.csv", "data/products.json")
 
 # Assignment 2: Create a log file writer that appends log messages to a file with timestamps.
+import logging
+import datetime
+def create_logger(log_file_path: str) -> logging.Logger:
+    logger = logging.getLogger('LogFileWriter')
+    logger.setLevel(logging.INFO)
 
+    file_handler = logging.FileHandler(log_file_path)
+    file_handler.setLevel(logging.INFO)
+
+    formatter = logging.Formatter('%(asctime)s - %(message)s', datefmt='%Y-%m-%d %H:%M:%S')
+    file_handler.setFormatter(formatter)
+
+    logger.addHandler(file_handler)
+
+    return logger
+
+def log_message(logger: logging.Logger, message: str) -> None:
+    logger.info(message)
+
+log_file = "data/messages.log"
+logger = create_logger(log_file)
+log_message(logger, "this is first message...")
 # Congratulations on completing the comprehensive section on Python file I/O and JSON handling!
 # Review the assignments, try to solve them, and check your understanding of file operations and data formats.
