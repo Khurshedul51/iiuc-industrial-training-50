@@ -81,6 +81,9 @@ print("Pip examples: See comments for usage.")
 # Assignments
 # -----------
 # Assignment 1: Create a simple package with at least two modules, each containing one function.
+from mypackage import submodule1, submodule2
+submodule1.greet_in_chittagonian("sakib")
+submodule2.greet("rakib")
 # Assignment 2: Use pip to install any library that is new to you and write a small script to explore its functionality.
 
 # Congratulations on completing the comprehensive section on Python's modules, packages, libraries, and pip!
