@@ -125,7 +125,7 @@ else: print("incorrect password!")
 
 if is_correct_password and is_correct_username:
     print("login successful!")
-else: "login unsuccessful! try again..."
+else: print("login unsuccessful! try again...")
 
 # Example 7: Loan Approval System
 # This example uses multiple conditions to determine if an applicant qualifies for a personal loan.
