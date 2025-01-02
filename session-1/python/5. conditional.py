@@ -119,7 +119,7 @@ if username == "sakib_bodda":
 else: print("incorrect username!")
 
 if password == "kene cholor":
-    is_correct_password = False
+    is_correct_password = True
     print("password is correct!")
 else: print("incorrect password!")
 
